@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Study Tools - Student Learning Hub</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="QVS.jpg" class="logo">
+    <h1>Study Tools</h1>
+    <p>Practice • Revise • Improve</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="subjects.html">Subjects</a>
+    <a href="studytools.html" class="active">Study Tools</a>
+    <a href="community.html">Community</a>
+    <a href="about.html">About Us</a>
+</nav>
+
+<!-- QUIZ SECTION -->
+<div class="card">
+
+    <h2>🧠 Interactive Quiz (Hard Level)</h2>
+
+    <button class="quiz-btn" onclick="calculateQuiz()">Submit Quiz</button>
+
+    <div id="quizResult"></div>
+</div>
+
+<!-- SMART RECOMMENDATION -->
+<div class="card">
+    <h2>📊 Smart Recommendation System</h2>
+    <p id="recommendationText">Complete the quiz to get personalised feedback.</p>
+</div>
+
+<div class="tools-container">
+
+<!-- ================= MATHEMATICS ================= -->
+<div class="quiz-box">
+    <h3>Mathematics</h3>
+
+    <p>1. Solve: x² - 7x + 12 = 0</p>
+    <label><input type="radio" name="math1" value="correct">x = 3 or 4</label>
+    <label><input type="radio" name="math1" value="wrong">x = -3 or -4</label>
+
+    <p>2. Derivative of 5x²?</p>
+    <label><input type="radio" name="math2" value="correct">10x</label>
+    <label><input type="radio" name="math2" value="wrong">5x</label>
+
+    <p>3. Probability (2 red, 3 blue): P(red)?</p>
+    <label><input type="radio" name="math3" value="correct">2/5</label>
+    <label><input type="radio" name="math3" value="wrong">3/5</label>
+</div>
+
+<!-- ================= ENGLISH ================= -->
+<div class="quiz-box">
+    <h3>English</h3>
+
+    <p>1. “The world is a stage” is?</p>
+    <label><input type="radio" name="eng1" value="correct">Metaphor</label>
+    <label><input type="radio" name="eng1" value="wrong">Simile</label>
+
+    <p>2. Synonym of “rapid”</p>
+    <label><input type="radio" name="eng2" value="correct">Fast</label>
+    <label><input type="radio" name="eng2" value="wrong">Slow</label>
+
+    <p>3. Correct sentence:</p>
+    <label><input type="radio" name="eng3" value="correct">She has completed her work</label>
+    <label><input type="radio" name="eng3" value="wrong">She completed has work</label>
+</div>
+
+<!-- ================= COMPUTER ================= -->
+<div class="quiz-box">
+    <h3>Computer Studies</h3>
+
+    <p>1. What is OOP?</p>
+    <label><input type="radio" name="comp1" value="correct">Object Oriented Programming</label>
+    <label><input type="radio" name="comp1" value="wrong">Open Online Program</label>
+
+    <p>2. HTTP stands for?</p>
+    <label><input type="radio" name="comp2" value="correct">HyperText Transfer Protocol</label>
+    <label><input type="radio" name="comp2" value="wrong">High Text Transfer Program</label>
+
+    <p>3. CPU performs?</p>
+    <label><input type="radio" name="comp3" value="correct">Processing</label>
+    <label><input type="radio" name="comp3" value="wrong">Storage</label>
+</div>
+
+<!-- ================= ACCOUNTING ================= -->
+<div class="quiz-box">
+    <h3>Accounting</h3>
+
+    <p>1. Debit increases?</p>
+    <label><input type="radio" name="acc1" value="correct">Assets</label>
+    <label><input type="radio" name="acc1" value="wrong">Liabilities</label>
+
+    <p>2. Trial balance checks?</p>
+    <label><input type="radio" name="acc2" value="correct">Mathematical accuracy</label>
+    <label><input type="radio" name="acc2" value="wrong">Profit only</label>
+
+    <p>3. Equity = ?</p>
+    <label><input type="radio" name="acc3" value="correct">Assets - Liabilities</label>
+    <label><input type="radio" name="acc3" value="wrong">Income - Expenses</label>
+</div>
+
+<!-- ================= ECONOMICS ================= -->
+<div class="quiz-box">
+    <h3>Economics</h3>
+
+    <p>1. Inflation means?</p>
+    <label><input type="radio" name="eco1" value="correct">General price increase</label>
+    <label><input type="radio" name="eco1" value="wrong">Price decrease</label>
+
+    <p>2. Demand increases when price?</p>
+    <label><input type="radio" name="eco2" value="correct">Decreases</label>
+    <label><input type="radio" name="eco2" value="wrong">Increases</label>
+
+    <p>3. GDP measures?</p>
+    <label><input type="radio" name="eco3" value="correct">Total national output</label>
+    <label><input type="radio" name="eco3" value="wrong">Population size</label>
+</div>
+
+</div>
+
+<!-- FLASHCARDS -->
+<div class="card">
+    <h2>Flashcards</h2>
+
+    <div class="flashcard-container">
+
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">HTML</div>
+                <div class="flashcard-back">Structure of websites</div>
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">CPU</div>
+                <div class="flashcard-back">Brain of the computer</div>
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">GDP</div>
+                <div class="flashcard-back">Total economic output</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- TIMETABLE -->
+<div class="card">
+    <h2>Timetable Planner</h2>
+
+    <input type="text" id="day" placeholder="Day">
+    <input type="text" id="subject" placeholder="Subject">
+    <input type="text" id="time" placeholder="Time">
+
+    <button onclick="addTimetableEntry()" class="quiz-btn">Add</button>
+</div>
+
+<div class="card">
+    <h2>Your Timetable</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Subject</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="timetableBody"></tbody>
+    </table>
+</div>
+
+<footer>
+    <p>© 2026 Student Learning Hub</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
